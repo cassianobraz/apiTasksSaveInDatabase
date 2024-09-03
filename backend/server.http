@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:3333
+
+### Create new task
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "example",
+  "description": "lorem"
+}
+
+### Listener full tasks
+GET {{baseUrl}}/tasks
+
+### Update on task with id and body with title or description
+PUT {{baseUrl}}/tasks/{id}
+Content-Type: application/json
+
+{
+  "title": "{example}"
+}
+
+### Remove one task with id
+DELETE {{baseUrl}}/tasks/1
+
+### Select with id one task complete
+PATCH {{baseUrl}}/tasks/3/complete
+
+### Saving all database tasks to csv file
+POST {{baseUrl}}/multipart/form-data
