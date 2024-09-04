@@ -21,10 +21,10 @@ Content-Type: application/json
 }
 
 ### Remove one task with id
-DELETE {{baseUrl}}/tasks/1
+DELETE {{baseUrl}}/tasks/{id}
 
 ### Select with id one task complete
-PATCH {{baseUrl}}/tasks/3/complete
+PATCH {{baseUrl}}/tasks/{id}/complete
 
 ### Saving all database tasks to csv file
 POST {{baseUrl}}/multipart/form-data
